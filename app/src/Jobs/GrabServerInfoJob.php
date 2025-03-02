@@ -22,6 +22,7 @@ if(! $entityManager instanceof EntityManager){
 
 // @phpstan-ignore while.alwaysTrue
 while(true){
+    sleep(5);
     $sourceQuery = new SourceQuery();
     try{
         $sourceQuery->Connect("79.127.217.197", 22912);
@@ -36,6 +37,7 @@ while(true){
         );
         $entityManager->persist($serverHistory);
         $entityManager->flush();
+        continue;
     }
 
     $serverInfo = $sourceQuery->GetInfo();
@@ -57,5 +59,4 @@ while(true){
 
     $entityManager->persist($serverHistory);
     $entityManager->flush();
-    sleep(5);
 }
