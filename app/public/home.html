@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interloper Server Checker</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/greysteam/greysteam.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <script src="https://unpkg.com/htmx.org@2.0.4"
+        integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div class="window headless no-resize">
+            <fieldset class="flex-row">
+                <legend>Interloper TF2 Server</legend>
+                <div hx-post="/server_info" hx-trigger="every 5s" hx-swap="innerHTML">
+                    <span>Pulling server information...</span>
+                </div>
+            </fieldset>
+        </div>
+    </main>
+</body>
+
+</html>

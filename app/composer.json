@@ -1,0 +1,33 @@
+{
+    "name": "yuyui/interlopertracker",
+    "description": "Something that tracks the interloper server and maybe more",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yuyui\\Interlopertracker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yuyui Moe",
+            "email": "yui@yuyui.moe"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.7",
+        "xpaw/php-source-query-class": "^4.0",
+        "doctrine/orm": "^3.3",
+        "doctrine/dbal": "^4.2",
+        "symfony/cache": "^7.2",
+        "doctrine/annotations": "^2.0",
+        "uma/dic": "^4.1",
+        "monolog/monolog": "^3.8"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^3.11"
+    }
+}

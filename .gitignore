@@ -1,0 +1,5 @@
+logs
+.phpls
+.vscode-server
+app/vendor
+app/var
